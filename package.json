@@ -1,0 +1,27 @@
+{
+  "name": "cata-components-button",
+  "version": "0.1.0",
+  "description": "CSS components-button styles",
+  "author": {
+    "name": "Raúl Hernández",
+    "email": "raulghm@gmail.com",
+    "url": "https://github.com/raulghm"
+  },
+  "repository": "raulghm/cata-components-button",
+  "homepage": "https://github.com/raulghm/cata-components-button#readme",
+  "keywords": [
+    "components-button",
+    "browser",
+    "css",
+    "suitcss",
+    "style",
+    "cata"
+  ],
+  "license": "MIT",
+  "files": [
+    "index.css",
+    "index.js",
+    "lib"
+  ],
+  "style": "index.css"
+}
