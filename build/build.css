@@ -1,0 +1,492 @@
+/** @define Button; use strict */
+
+/**
+ * Settings
+ */
+
+:root {
+  /* Base */
+}
+
+/**
+ * The button classes are best applied to links, buttons, and submit inputs.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI of the site/app.
+ */
+
+/**
+ * 1. Corrects inability to style clickable `input` types in iOS.
+ * 2. Normalize `box-sizing` across all elements that this component could be
+ *    applied to.
+ * 3. Inherit text color from ancestor.
+ * 4. Inherit font styles from ancestor.
+ * 5. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
+ * 6. Prevent button text from being selectable.
+ * 7. Make sure `input` will wrap text across multiple lines.
+ */
+
+.Button {
+  -webkit-appearance: none; /* 1 */
+  background: transparent;
+  border: 1px solid color(var(--color-gray-lighter) b(10%));
+  box-sizing: border-box; /* 2 */
+  color: var(--color-base); /* 3 */
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: inherit; /* 5 */
+  margin: 0;
+  padding: var(--padding-base-vertical) var(--padding-base-horizontal);
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; /* 6 */
+  white-space: normal; /* 7 */
+  outline: 0;
+  border-radius: var(--border-radius-base);
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.Button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * UI states
+ */
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+  text-decoration: none;
+  outline: 0;
+}
+
+.Button:disabled,
+.Button[disabled],
+.Button.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/**
+ * Options
+ */
+
+/* Button default */
+
+.Button--default {
+  color: var(--color-base);
+  background-color: color(var(--color-gray-lighter) b(10%));
+  border-color: color(var(--color-gray-lighter) b(10%));
+}
+
+.Button--default:hover {
+  color: var(--color-base);
+  background-color: color(color(var(--color-gray-lighter) b(10%)) b(10%));
+  border-color: color(color(var(--color-gray-lighter) b(10%)) b(30%));
+}
+
+.Button--default:focus,
+.Button--default.is-focus {
+  color: var(--color-base);
+  background-color: color(color(var(--color-gray-lighter) b(10%)) b(10%));
+  border-color: color(color(var(--color-gray-lighter) b(10%)) b(25%));
+}
+
+.Button--default:active,
+.Button--default.is-active {
+  color: var(--color-base);
+  background-color: color(color(var(--color-gray-lighter) b(10%)) b(20%));
+  border-color: color(color(var(--color-gray-lighter) b(10%)) b(40%));
+}
+
+/* Button primary */
+
+.Button--primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.Button--primary:hover {
+  color: var(--color-white);
+  background-color: color(var(--color-primary) b(20%));
+  border-color: color(var(--color-primary) b(20%));
+}
+
+.Button--primary:focus,
+.Button--primary.is-focus {
+  color: var(--color-white);
+  background-color: color(var(--color-primary) b(30%));
+  border-color: color(var(--color-primary) b(30%));
+}
+
+.Button--primary:active,
+.Button--primary.is-active {
+  color: var(--color-white);
+  background-color: color(var(--color-primary) b(40%));
+  border-color: color(var(--color-primary) b(40%));
+}
+
+/* Button success */
+
+.Button--success {
+  color: var(--color-white);
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.Button--success:hover {
+  color: var(--color-white);
+  background-color: color(var(--color-success) b(20%));
+  border-color: color(var(--color-success) b(20%));
+}
+
+.Button--success:focus,
+.Button--success.is-focus {
+  color: var(--color-white);
+  background-color: color(var(--color-success) b(30%));
+  border-color: color(var(--color-success) b(30%));
+}
+
+.Button--success:active,
+.Button--success.is-active {
+  color: var(--color-white);
+  background-color: color(var(--color-success) b(40%));
+  border-color: color(var(--color-success) b(40%));
+}
+
+/* Button info */
+
+.Button--info {
+  color: var(--color-white);
+  background-color: var(--color-info);
+  border-color: var(--color-info);
+}
+
+.Button--info:hover {
+  color: var(--color-white);
+  background-color: color(var(--color-info) b(20%));
+  border-color: color(var(--color-info) b(20%));
+}
+
+.Button--info:focus,
+.Button--info.is-focus {
+  color: var(--color-white);
+  background-color: color(var(--color-info) b(30%));
+  border-color: color(var(--color-info) b(30%));
+}
+
+.Button--info:active,
+.Button--info.is-active {
+  color: var(--color-white);
+  background-color: color(var(--color-info) b(40%));
+  border-color: color(var(--color-info) b(40%));
+}
+
+/* Button warning */
+
+.Button--warning {
+  color: var(--color-white);
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+.Button--warning:hover {
+  color: var(--color-white);
+  background-color: color(var(--color-warning) b(20%));
+  border-color: color(var(--color-warning) b(20%));
+}
+
+.Button--warning:focus,
+.Button--warning.is-focus {
+  color: var(--color-white);
+  background-color: color(var(--color-warning) b(30%));
+  border-color: color(var(--color-warning) b(30%));
+}
+
+.Button--warning:active,
+.Button--warning.is-active {
+  color: var(--color-white);
+  background-color: color(var(--color-warning) b(40%));
+  border-color: color(var(--color-warning) b(40%));
+}
+
+/* Button danger */
+
+.Button--danger {
+  color: var(--color-white);
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.Button--danger:hover {
+  color: var(--color-white);
+  background-color: color(var(--color-danger) b(20%));
+  border-color: color(var(--color-danger) b(20%));
+}
+
+.Button--danger:focus,
+.Button--danger.is-focus {
+  color: var(--color-white);
+  background-color: color(var(--color-danger) b(30%));
+  border-color: color(var(--color-danger) b(30%));
+}
+
+.Button--danger:active,
+.Button--danger.is-active {
+  color: var(--color-white);
+  background-color: color(var(--color-danger) b(40%));
+  border-color: color(var(--color-danger) b(40%));
+}
+
+/**
+ * Outline
+ */
+
+.Button--outline {
+  background-color: transparent;
+}
+
+/* Button primaryOutline */
+
+.Button--primaryOutline {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.Button--primaryOutline:hover {
+  color: color(var(--color-primary) b(20%));
+  border-color: color(var(--color-primary) b(20%));
+}
+
+.Button--primaryOutline:focus,
+.Button--primaryOutline.is-focus {
+  color: color(var(--color-primary) b(30%));
+  border-color: color(var(--color-primary) b(30%));
+}
+
+.Button--primaryOutline:active,
+.Button--primaryOutline.is-active {
+  color: color(var(--color-primary) b(40%));
+  border-color: color(var(--color-primary) b(40%));
+}
+
+/* Button successOutline */
+
+.Button--successOutline {
+  color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.Button--successOutline:hover {
+  color: color(var(--color-success) b(20%));
+  border-color: color(var(--color-success) b(20%));
+}
+
+.Button--successOutline:focus,
+.Button--successOutline.is-focus {
+  color: color(var(--color-success) b(30%));
+  border-color: color(var(--color-success) b(30%));
+}
+
+.Button--successOutline:active,
+.Button--successOutline.is-active {
+  color: color(var(--color-success) b(40%));
+  border-color: color(var(--color-success) b(40%));
+}
+
+/* Button infoOutline */
+
+.Button--infoOutline {
+  color: var(--color-info);
+  border-color: var(--color-info);
+}
+
+.Button--infoOutline:hover {
+  color: color(var(--color-info) b(20%));
+  border-color: color(var(--color-info) b(20%));
+}
+
+.Button--infoOutline:focus,
+.Button--infoOutline.is-focus {
+  color: color(var(--color-info) b(30%));
+  border-color: color(var(--color-info) b(30%));
+}
+
+.Button--infoOutline:active,
+.Button--infoOutline.is-active {
+  color: color(var(--color-info) b(40%));
+  border-color: color(var(--color-info) b(40%));
+}
+
+/* Button warningOutline */
+
+.Button--warningOutline {
+  color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+.Button--warningOutline:hover {
+  color: color(var(--color-warning) b(20%));
+  border-color: color(var(--color-warning) b(20%));
+}
+
+.Button--warningOutline:focus,
+.Button--warningOutline.is-focus {
+  color: color(var(--color-warning) b(30%));
+  border-color: color(var(--color-warning) b(30%));
+}
+
+.Button--warningOutline:active,
+.Button--warningOutline.is-active {
+  color: color(var(--color-warning) b(40%));
+  border-color: color(var(--color-warning) b(40%));
+}
+
+/* Button dangerOutline */
+
+.Button--dangerOutline {
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.Button--dangerOutline:hover {
+  color: color(var(--color-danger) b(20%));
+  border-color: color(var(--color-danger) b(20%));
+}
+
+.Button--dangerOutline:focus,
+.Button--dangerOutline.is-focus {
+  color: color(var(--color-danger) b(30%));
+  border-color: color(var(--color-danger) b(30%));
+}
+
+.Button--dangerOutline:active,
+.Button--dangerOutline.is-active {
+  color: color(var(--color-danger) b(40%));
+  border-color: color(var(--color-danger) b(40%));
+}
+
+/**
+ * Link
+ * Make a button look and behave like a link
+ */
+
+.Button--link {
+  color: var(--color-base);
+  font-weight: normal;
+  border-radius: 0;
+}
+
+.Button--link:active,
+.Button--link[disabled] {
+  background-color: transparent;
+}
+
+.Button--link:hover,
+.Button--link:focus,
+.Button--link:active {
+  border-color: transparent;
+}
+
+.Button--link:hover,
+.Button--link:focus {
+  background-color: transparent;
+}
+
+.Button--link[disabled] {
+  text-decoration: none;
+}
+
+/**
+ * Button Sizes
+ */
+
+.Button--sm {
+  /* line-height: ensure proper height of button next to sm input */
+  padding: var(--padding-sm-vertical) var(--padding-sm-horizontal);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.Button--md {
+  padding: var(--padding-md-vertical) var(--padding-md-horizontal);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  border-radius: var(--border-radius-md);
+}
+
+.Button--lg {
+  /* line-height: ensure even-numbered height of button next to large input */
+  padding: var(--padding-lg-vertical) var(--padding-lg-horizontal);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  border-radius: var(--border-radius-lg);
+}
+
+/**
+ * Block button
+ */
+
+.Button--block {
+  display: block;
+  width: 100%;
+}
+
+/* Vertically space out multiple block buttons */
+
+.Button--block + .Button--block {
+  margin-top: 5px;
+}
+
+/* Specificity overrides */
+
+input[type="submit"].Button--block,
+input[type="reset"].Button--block,
+input[type="button"].Button--block {
+  width: 100%;
+}
+
+/**
+ * Group
+ */
+
+.Button--group {
+  position: relative;
+}
+
+.Button--group .Button {
+  float: left;
+  margin-left: -1px;
+}
+
+.Button--group .Button:hover,
+.Button--group .Button:focus {
+  z-index: 2;
+}
+
+.Button--group .Button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.Button--group .Button:first-child {
+  margin-left: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.Button--group .Button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
