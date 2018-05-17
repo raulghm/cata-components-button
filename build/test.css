@@ -1,0 +1,627 @@
+/** @define Test */
+
+/**
+ * The 'describe' CSS counter
+ */
+
+.Test {
+  counter-reset: test-describe;
+}
+
+.Test-describe::before {
+  content: counter(test-describe);
+  counter-increment: test-describe;
+}
+
+/**
+ * The 'it' CSS counter
+ */
+
+.Test-describe {
+  counter-reset: test-it;
+}
+
+.Test-it::before {
+  content: counter(test-describe) "." counter(test-it);
+  counter-increment: test-it;
+}
+
+/**
+ * The test title
+ */
+
+.Test-title {
+  background: #eee;
+  color: #999;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+/**
+ * The test description and expectation titles
+ */
+
+.Test-describe,
+.Test-it {
+  background: #eee;
+  border-left: 5px solid #666;
+  color: #666;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 0.75em 20px;
+}
+
+.Test-describe {
+  font-size: 1.5em;
+  margin: 60px 0 20px;
+}
+
+/**
+ * The counter styles
+ */
+
+.Test-describe::before,
+.Test-it::before {
+  color: #999;
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 30px;
+  text-transform: uppercase;
+}
+
+/**
+ * Colors
+ */
+
+:root {
+
+  /* Basic colors */
+
+  /* Gray colors */
+
+  /* States colors */
+
+  /**
+   * Custom native colors
+   * https://github.com/mrmrs/colors/blob/master/css/colors.css#L44
+   */
+
+  /* Cool */
+
+  /* Warm */
+}
+
+/**
+ * Typographic
+ *
+ * The ratios are based off of the ratios used on modular scale.
+ * https://github.com/corysimmons/typographic
+ */
+
+:root {
+
+  /* Ratios */
+}
+
+/**
+ * Font stack
+ * http://www.awayback.com/revised-font-stack
+ */
+
+:root {
+
+  /* Sans-serif */
+
+  /* Serif */
+}
+
+/**
+ * Base variables
+ */
+
+:root {
+
+  /* Base */
+
+  /* Type variables */
+}
+
+/**
+ * Definition of common properties for components
+ */
+
+/** @define Button; use strict */
+
+/**
+ * Settings
+ */
+
+:root {
+  /* Base */
+}
+
+/**
+ * The button classes are best applied to links, buttons, and submit inputs.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI of the site/app.
+ */
+
+/**
+ * 1. Corrects inability to style clickable `input` types in iOS.
+ * 2. Normalize `box-sizing` across all elements that this component could be
+ *    applied to.
+ * 3. Inherit text color from ancestor.
+ * 4. Inherit font styles from ancestor.
+ * 5. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
+ * 6. Prevent button text from being selectable.
+ * 7. Make sure `input` will wrap text across multiple lines.
+ */
+
+.Button {
+  -webkit-appearance: none; /* 1 */
+  background: transparent;
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box; /* 2 */
+  color: #111; /* 3 */
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: inherit; /* 5 */
+  margin: 0;
+  padding: 6px 14px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; /* 6 */
+  white-space: normal; /* 7 */
+  outline: 0;
+  border-radius: 0.25rem;
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.Button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * UI states
+ */
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+  text-decoration: none;
+  outline: 0;
+}
+
+.Button:disabled,
+.Button[disabled],
+.Button.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/**
+ * Options
+ */
+
+/* Button default */
+
+.Button--default {
+  color: #111;
+  background-color: rgb(230, 230, 230);
+  border-color: rgb(230, 230, 230);
+}
+
+.Button--default:hover {
+  color: #111;
+  background-color: rgb(230, 230, 230);
+  border-color: rgb(191, 191, 191);
+}
+
+.Button--default:focus,
+.Button--default.is-focus {
+  color: #111;
+  background-color: rgb(230, 230, 230);
+  border-color: rgb(200, 200, 200);
+}
+
+.Button--default:active,
+.Button--default.is-active {
+  color: #111;
+  background-color: rgb(209, 209, 209);
+  border-color: rgb(177, 177, 177);
+}
+
+/* Button primary */
+
+.Button--primary {
+  color: #fff;
+  background-color: #496ee8;
+  border-color: #496ee8;
+}
+
+.Button--primary:hover {
+  color: #fff;
+  background-color: rgb(74, 104, 204);
+  border-color: rgb(74, 104, 204);
+}
+
+.Button--primary:focus,
+.Button--primary.is-focus {
+  color: #fff;
+  background-color: rgb(74, 98, 179);
+  border-color: rgb(74, 98, 179);
+}
+
+.Button--primary:active,
+.Button--primary.is-active {
+  color: #fff;
+  background-color: rgb(74, 92, 153);
+  border-color: rgb(74, 92, 153);
+}
+
+/* Button success */
+
+.Button--success {
+  color: #fff;
+  background-color: #20c77f;
+  border-color: #20c77f;
+}
+
+.Button--success:hover {
+  color: #fff;
+  background-color: rgb(33, 204, 130);
+  border-color: rgb(33, 204, 130);
+}
+
+.Button--success:focus,
+.Button--success.is-focus {
+  color: #fff;
+  background-color: rgb(33, 179, 116);
+  border-color: rgb(33, 179, 116);
+}
+
+.Button--success:active,
+.Button--success.is-active {
+  color: #fff;
+  background-color: rgb(33, 153, 101);
+  border-color: rgb(33, 153, 101);
+}
+
+/* Button info */
+
+.Button--info {
+  color: #fff;
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.Button--info:hover {
+  color: #fff;
+  background-color: rgb(51, 143, 204);
+  border-color: rgb(51, 143, 204);
+}
+
+.Button--info:focus,
+.Button--info.is-focus {
+  color: #fff;
+  background-color: rgb(51, 128, 179);
+  border-color: rgb(51, 128, 179);
+}
+
+.Button--info:active,
+.Button--info.is-active {
+  color: #fff;
+  background-color: rgb(51, 112, 153);
+  border-color: rgb(51, 112, 153);
+}
+
+/* Button warning */
+
+.Button--warning {
+  color: #fff;
+  background-color: #e67e22;
+  border-color: #e67e22;
+}
+
+.Button--warning:hover {
+  color: #fff;
+  background-color: rgb(204, 113, 33);
+  border-color: rgb(204, 113, 33);
+}
+
+.Button--warning:focus,
+.Button--warning.is-focus {
+  color: #fff;
+  background-color: rgb(179, 101, 33);
+  border-color: rgb(179, 101, 33);
+}
+
+.Button--warning:active,
+.Button--warning.is-active {
+  color: #fff;
+  background-color: rgb(153, 89, 33);
+  border-color: rgb(153, 89, 33);
+}
+
+/* Button danger */
+
+.Button--danger {
+  color: #fff;
+  background-color: #e84949;
+  border-color: #e84949;
+}
+
+.Button--danger:hover {
+  color: #fff;
+  background-color: rgb(204, 74, 74);
+  border-color: rgb(204, 74, 74);
+}
+
+.Button--danger:focus,
+.Button--danger.is-focus {
+  color: #fff;
+  background-color: rgb(179, 74, 74);
+  border-color: rgb(179, 74, 74);
+}
+
+.Button--danger:active,
+.Button--danger.is-active {
+  color: #fff;
+  background-color: rgb(153, 74, 74);
+  border-color: rgb(153, 74, 74);
+}
+
+/**
+ * Outline
+ */
+
+.Button--outline {
+  background-color: transparent;
+}
+
+/* Button primaryOutline */
+
+.Button--primaryOutline {
+  color: #496ee8;
+  border-color: #496ee8;
+}
+
+.Button--primaryOutline:hover {
+  color: rgb(74, 104, 204);
+  border-color: rgb(74, 104, 204);
+}
+
+.Button--primaryOutline:focus,
+.Button--primaryOutline.is-focus {
+  color: rgb(74, 98, 179);
+  border-color: rgb(74, 98, 179);
+}
+
+.Button--primaryOutline:active,
+.Button--primaryOutline.is-active {
+  color: rgb(74, 92, 153);
+  border-color: rgb(74, 92, 153);
+}
+
+/* Button successOutline */
+
+.Button--successOutline {
+  color: #20c77f;
+  border-color: #20c77f;
+}
+
+.Button--successOutline:hover {
+  color: rgb(33, 204, 130);
+  border-color: rgb(33, 204, 130);
+}
+
+.Button--successOutline:focus,
+.Button--successOutline.is-focus {
+  color: rgb(33, 179, 116);
+  border-color: rgb(33, 179, 116);
+}
+
+.Button--successOutline:active,
+.Button--successOutline.is-active {
+  color: rgb(33, 153, 101);
+  border-color: rgb(33, 153, 101);
+}
+
+/* Button infoOutline */
+
+.Button--infoOutline {
+  color: #3498db;
+  border-color: #3498db;
+}
+
+.Button--infoOutline:hover {
+  color: rgb(51, 143, 204);
+  border-color: rgb(51, 143, 204);
+}
+
+.Button--infoOutline:focus,
+.Button--infoOutline.is-focus {
+  color: rgb(51, 128, 179);
+  border-color: rgb(51, 128, 179);
+}
+
+.Button--infoOutline:active,
+.Button--infoOutline.is-active {
+  color: rgb(51, 112, 153);
+  border-color: rgb(51, 112, 153);
+}
+
+/* Button warningOutline */
+
+.Button--warningOutline {
+  color: #e67e22;
+  border-color: #e67e22;
+}
+
+.Button--warningOutline:hover {
+  color: rgb(204, 113, 33);
+  border-color: rgb(204, 113, 33);
+}
+
+.Button--warningOutline:focus,
+.Button--warningOutline.is-focus {
+  color: rgb(179, 101, 33);
+  border-color: rgb(179, 101, 33);
+}
+
+.Button--warningOutline:active,
+.Button--warningOutline.is-active {
+  color: rgb(153, 89, 33);
+  border-color: rgb(153, 89, 33);
+}
+
+/* Button dangerOutline */
+
+.Button--dangerOutline {
+  color: #e84949;
+  border-color: #e84949;
+}
+
+.Button--dangerOutline:hover {
+  color: rgb(204, 74, 74);
+  border-color: rgb(204, 74, 74);
+}
+
+.Button--dangerOutline:focus,
+.Button--dangerOutline.is-focus {
+  color: rgb(179, 74, 74);
+  border-color: rgb(179, 74, 74);
+}
+
+.Button--dangerOutline:active,
+.Button--dangerOutline.is-active {
+  color: rgb(153, 74, 74);
+  border-color: rgb(153, 74, 74);
+}
+
+/**
+ * Link
+ * Make a button look and behave like a link
+ */
+
+.Button--link {
+  color: #111;
+  font-weight: normal;
+  border-radius: 0;
+}
+
+.Button--link:active,
+.Button--link[disabled] {
+  background-color: transparent;
+}
+
+.Button--link:hover,
+.Button--link:focus,
+.Button--link:active {
+  border-color: transparent;
+}
+
+.Button--link:hover,
+.Button--link:focus {
+  background-color: transparent;
+}
+
+.Button--link[disabled] {
+  text-decoration: none;
+}
+
+/**
+ * Button Sizes
+ */
+
+.Button--sm {
+  /* line-height: ensure proper height of button next to sm input */
+  padding: 5px 10px;
+  font-size: 12.933px;
+  line-height: 1.333;
+  border-radius: 0.2rem;
+}
+
+.Button--md {
+  padding: 10px 14px;
+  font-size: 16.8px;
+  line-height: 1.2;
+  border-radius: 0.26rem;
+}
+
+.Button--lg {
+  /* line-height: ensure even-numbered height of button next to large input */
+  padding: 10px 16px;
+  font-size: 17.5px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+/**
+ * Block button
+ */
+
+.Button--block {
+  display: block;
+  width: 100%;
+}
+
+/* Vertically space out multiple block buttons */
+
+.Button--block + .Button--block {
+  margin-top: 5px;
+}
+
+/* Specificity overrides */
+
+input[type="submit"].Button--block,
+input[type="reset"].Button--block,
+input[type="button"].Button--block {
+  width: 100%;
+}
+
+/**
+ * Group
+ */
+
+.Button--group {
+  position: relative;
+}
+
+.Button--group .Button {
+  float: left;
+  margin-left: -1px;
+}
+
+.Button--group .Button:hover,
+.Button--group .Button:focus {
+  z-index: 2;
+}
+
+.Button--group .Button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.Button--group .Button:first-child {
+  margin-left: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.Button--group .Button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+

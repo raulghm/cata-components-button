@@ -35,7 +35,10 @@
     "test": "npm run lint"
   },
   "devDependencies": {
-    "suitcss-preprocessor": "^4.0.0",
-    "suitcss-components-test": "^1.0.0"
+    "suitcss-components-test": "^1.0.0",
+    "suitcss-preprocessor": "^4.0.0"
+  },
+  "dependencies": {
+    "cata-variables": "^0.1.0"
   }
 }
